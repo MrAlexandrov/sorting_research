@@ -8,11 +8,14 @@ set(CMAKE_CXX_STANDARD 20)
 #     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-instr-generate -fcoverage-mapping")
 # endif()
 
+add_subdirectory(third_party/ChartLib)
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 file(GLOB SRC_FILES "${CMAKE_SOURCE_DIR}/src/*.cpp")
 
 add_executable(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/main.cpp ${SRC_FILES})
+target_link_libraries(${PROJECT_NAME} PRIVATE chartlib)
 
 # include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
