@@ -7,7 +7,7 @@ AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: Never
 AlignAfterOpenBracket: BlockIndent
-BinPackParameters: true
+BinPackParameters: false
 PointerAlignment: Left
 AccessModifierOffset: -4 # indent for private/protected/public
 InsertNewlineAtEOF: true
